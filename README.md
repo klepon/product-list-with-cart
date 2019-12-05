@@ -1,3 +1,29 @@
+## About
+
+This is demo product listing with cart on the sidebar by Angga - bugs1945@gmail.com
+
+This App using FB create-react-app as the boilerplate with additional npm package as list below
+
+* placeholder image - https://www.npmjs.com/package/react-placeholder-image
+
+* bootstrap 4 style - https://getbootstrap.com/
+
+## How to use
+
+The package manager design for use in Linux or Wac, Windows user may find issue using this app
+
+* Download the source file
+
+* Make sure to use node version 10.13
+
+* With terminal/command line go to directory and `yarn install`
+
+* `yarn start` to run the app
+
+Other available scripts is listed bellow
+
+## Original readme file from create-react-app
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
