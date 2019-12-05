@@ -8,7 +8,19 @@ This App using FB create-react-app as the boilerplate with additional npm packag
 
 * bootstrap 4 style - https://getbootstrap.com/
 
-## How to use
+* axios to get api end point data - https://github.com/axios/axios
+
+Since this is simple apps, it did not use redux and only use react state with all function controller in main js file (App.js)
+
+There are 3 modules which a dummy component and used for render the page:
+
+1. card.jsx for the product panel
+
+2. cart.jsx for the cart panel on side bar. This module containe logic to show no items message or items listing
+
+3. cartItem.jsx for cart item
+
+## How to use for development
 
 The package manager design for use in Linux or Wac, Windows user may find issue using this app
 
@@ -16,9 +28,29 @@ The package manager design for use in Linux or Wac, Windows user may find issue 
 
 * Make sure to use node version 10.13
 
-* With terminal/command line go to directory and `yarn install`
+* With terminal/command line go to directory and run `yarn install`
 
 * `yarn start` to run the app
+
+## How to test
+
+* With terminal/command line go to directory and run `yarn test`
+
+Better to use 2 terminals, one for development and one more for testing
+
+Unit test using jest and react testing library that include in the apps boilerplate
+
+### Testing covered
+
+* renders without crashing
+
+* convert cent to dollars function
+
+* render product card
+
+* render sold out product card when qty equal 0
+
+* render cart item
 
 Other available scripts is listed bellow
 
