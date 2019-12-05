@@ -1,19 +1,21 @@
 import React from 'react';
-import { generateCustomPlaceholderURL } from 'react-placeholder-image';
 
-function CartItem() {
-    const placeholderImageURL = generateCustomPlaceholderURL(200, 164);
+import centToDollars from '../helper/centToDollars';
+
+const CartItem = ({ id, props }) => {
+    const { results, cart, addToCart, removeFromCart, removeAllFromCart } = props;
+    const item = results.filter(i => i.id === id)[0];
 
     return (
-        <div className="media cart-item mb-2 align-items-center">
-            <img src={placeholderImageURL} className="mr-2" alt="{{image name}}" />
+        <div className="media cart-item mb-3 align-items-center">
+            <p className="badge badge-light mb-0 p-2 mr-2">{cart[id]}x</p>
             <div className="media-body mr-2">
-                <p className="mb-0 small">Media heading</p>
-                <button type="button" className="badge badge-secondary">+</button>
-                <button type="button" className="badge badge-secondary">-</button>
-                <button type="button" className="badge badge-secondary">x</button>
+                <p className="mb-0 small">{item.name}</p>
+                <button onClick={() => addToCart(id)} type="button" className="mr-1 badge badge-secondary">+</button>
+                <button onClick={() => removeFromCart(id)} type="button" className="mr-1 badge badge-secondary">-</button>
+                <button onClick={() => removeAllFromCart(id)} type="button" className="badge badge-secondary">x</button>
             </div>
-            <div className="small">$000.00</div>
+            <div className="small">{centToDollars(cart[id] * item.salePrice)}</div>
         </div>
     );
 }

@@ -23,3 +23,11 @@
 .cart-item img {
     width: 35px;
 }
+
+.visible-on-hover button {
+    opacity: 0;
+}
+
+.visible-on-hover:hover button {
+    opacity: 1;
+}
