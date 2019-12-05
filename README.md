@@ -22,7 +22,7 @@ There are 3 modules which a dummy component and used for render the page:
 
 ## How to use for development
 
-The package manager design for use in Linux or Wac, Windows user may find issue using this app
+The package manager design for use in Linux or Mac, Windows user may find issue using this package manager
 
 * Download the source file
 
